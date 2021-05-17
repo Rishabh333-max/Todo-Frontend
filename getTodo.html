@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        GET TODO
+    </title>
+</head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+ 
+    body {
+        margin: 0px 0px;
+        background: url(./images/rps20.jpg);
+        background-size: cover;
+        background-position: center ;
+        font-family: sans-serif;
+    }
+
+    #header {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo {
+        font-size: 25px;
+        font-weight: 900;
+    }
+
+    #links {
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #links>a {
+        text-decoration: none;
+        color: blue;
+    }
+    #todoList{
+        width: 50%;
+        margin: 20px 25%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .singleTodo{
+        width: 80%;
+        margin: 20px 10%;
+        background-color: rgb(223, 226, 27);
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100px;
+        border-radius: 10px;
+    }
+    #forms{
+        width: 50%;
+        margin: 20px 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    @media only screen and (max-width:1024px){
+        body {
+        margin: 0px 0px;
+        background: url(./images/rps20.jpg);
+        background-size: cover;
+        background-position: center ;
+        font-family: sans-serif;
+    }
+
+    #header {
+        width: 100%;
+        height: 200px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo {
+        font-size: 50px;
+        font-weight: 900;
+    }
+
+    #links {
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #links>a {
+        font-size: 20px;
+        text-decoration: none;
+        color: blue;
+    }
+    #todoList{
+        width: 50%;
+        margin: 20px 25%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .singleTodo{
+        width: 80%;
+        margin: 20px 10%;
+        background-color: rgb(223, 226, 27);
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100px;
+        border-radius: 10px;
+    }
+    #forms{
+        width: 50%;
+        margin: 20px 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+    @media only screen and (max-width:768px){
+
+    body {
+        margin: 0px 0px;
+        background: url(./images/rps20.jpg);
+        background-size: cover;
+        background-position: center ;
+        font-family: sans-serif;
+    }
+
+    #header {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo {
+        font-size: 25px;
+        font-weight: 900;
+    }
+
+    #links {
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #links>a {
+        text-decoration: none;
+        color: blue;
+    }
+    #todoList{
+        width: 50%;
+        margin: 20px 25%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .singleTodo{
+        width: 80%;
+        margin: 20px 10%;
+        background-color: rgb(223, 226, 27);
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100px;
+        border-radius: 10px;
+    }
+    #forms{
+        width: 50%;
+        margin: 20px 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+    @media only screen and (max-width:540px){
+    body {
+        margin: 0px 0px;
+        background: url(./images/rps20.jpg);
+        background-size: cover;
+        background-position: center ;
+        font-family: sans-serif;
+    }
+
+    #header {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo {
+        font-size: 25px;
+        font-weight: 900;
+    }
+
+    #links {
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #links>a {
+        text-decoration: none;
+        color: blue;
+    }
+    #todoList{
+        width: 50%;
+        margin: 20px 25%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .singleTodo{
+        width: 80%;
+        margin: 20px 10%;
+        background-color: rgb(223, 226, 27);
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100px;
+        border-radius: 10px;
+    }
+    #forms{
+        width: 50%;
+        margin: 20px 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+    @media only screen and (max-width:414px){
+    body {
+        margin: 0px 0px;
+        background: url(./images/rps20.jpg);
+        background-size: cover;
+        background-position: center ;
+        font-family: sans-serif;
+    }
+
+    #header {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo {
+        font-size: 25px;
+        font-weight: 900;
+    }
+
+    #links {
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #links>a {
+        font-size: 15px;
+        text-decoration: none;
+        color: blue;
+    }
+    #todoList{
+       min-width: 50%;
+        margin: 20px 25%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .singleTodo{
+        width: 80%;
+        margin: 20px 10%;
+        background-color: rgb(223, 226, 27);
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100px;
+        border-radius: 10px;
+    }
+    #forms{
+        width: 50%;
+        margin: 20px 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }}
+</style>
+
+<body>
+    <div id="header">
+        <div id="logo">TODO PAGE</div>
+        <div id="links">
+           
+            <a href="createTodo.html">createTodo</a>
+            <a href="getTodo.html">getTodo</a>
+            <button id="logoutBTN">Logout</button>
+        </div>
+    </div>
+    <div id="forms">
+
+    </div>
+ <div id="todoList">
+   
+ </div>
+</body>
+<script>
+    if(!localStorage.getItem("UserInfo")){
+        window.location.href="login.html";
+    }
+var todoList=document.getElementById("todoList");
+var forms=document.getElementById("forms");
+var logoutBTN=document.getElementById("logoutBTN");
+//logoutBTN
+logoutBTN.addEventListener("click",function(e){
+    e.preventDefault();
+    localStorage.removeItem("UserInfo");
+    window.location.href="login.html";
+})
+ //extract user info from local storage
+ let UserInfo=JSON.parse(localStorage.getItem("UserInfo"));
+   //extract _id from userInfo
+    let UserId=UserInfo[0]._id;
+    //api url
+    let url="http://todoappbackend01.herokuapp.com/getTodo/"+UserId;
+    //fetch
+    fetch(url,{
+        method:"GET"
+    })
+        
+    .then(res=>{
+        return res.json();
+    })
+    .then(data=>{
+        console.log(data);
+        renderList(data);
+    })
+    .catch(err=>{
+        console.log(err);
+    })
+    //create a function to delete todo
+    function deleteIt(UserId,todoId){
+        let url="http://todoappbackend01.herokuapp.com/deleteTodo/"+UserId+"/"+todoId;
+        //fetch url here
+        fetch(url,{
+            method:"DELETE"
+        })
+        .then(response=>{
+            return response.json();
+        })
+        .then(data=>{
+            console.log(data);
+            renderList(data);
+        })
+        .catch(err=>{
+            console.log(err);
+        })
+    }
+    //editIt function here
+    function editIt(e,todoId){
+        e.preventDefault();
+        var title=document.getElementById("title");
+        var description=document.getElementById("description");
+        var deadline=document.getElementById("deadline");
+        let payload={
+            title:title.value,
+            description:description.value,
+            deadline:deadline.value,
+            todoId:todoId,
+            UserId:UserId
+        }
+        console.log(payload);
+
+        let url="http://todoappbackend01.herokuapp.com/updateTodo";
+
+        //fetch
+        fetch(url,{
+            method:"PATCH",
+            headers:{
+                'Content-Type':"application/json"
+            },
+            body:JSON.stringify(payload)
+        })
+        .then(res=>{
+            return res.json();
+        })
+        .then(data=>{
+            console.log(data);
+            renderList(data);
+            forms.innerHTML="";
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+    } 
+    //editInputBox function here
+    function editInputBox(UserId,todoId,titleArray,descriptionArray,deadline){
+        let title=titleArray.join(" ");
+        console.log(title)
+        let description=descriptionArray.join(" ");
+        console.log(description)
+
+        console.log("function called");
+        var html=`  <form>
+                        <input type="text" placeholder="Todo Title" id="title" value="${title}"><br />
+                        <input type="text" placeholder="Todo Description" id="description" value="${description}"><br />
+                        <input type="date" placeholder="Todo Deadline" id="deadline" value=${deadline}><br />
+                        <button id="EditTodoBtn" onClick=editIt(event,${JSON.stringify(todoId)})>Edit Todo</button>
+                    </form>`;
+
+        forms.innerHTML=html;
+    }
+    
+    function renderList(data){
+        let res="";
+        for(let i=0;i<data.length;i++){
+            let single=data[i];
+            let UserId=single.UserId;
+            console.log("UserId=",UserId);
+            let todoId=single._id;
+            console.log("todoId=",todoId);
+
+            console.log("id=",todoId);
+            console.log("single=",single);
+            let titleArray=single.title.split(" ");
+            console.log(titleArray);
+            let descriptionArray=single.description.split(" ")
+            
+
+            var html=`  <div class="singleTodo">
+         <div class="info">
+             <div class="title">
+                 ${single.title}
+             </div>
+             <div class="description">${single.description}</div>
+             <div class="deadline">${single.deadline}</div>
+         </div>
+         <div class="buttons">
+             <button onClick=editInputBox(${JSON.stringify(UserId)},${JSON.stringify(todoId)},${JSON.stringify(titleArray)},${JSON.stringify(descriptionArray)},${JSON.stringify(single.deadline)})>Edit</button>
+             <button onclick=deleteIt(${JSON.stringify(UserId)},${JSON.stringify(todoId)})>Delete</button>
+         </div>
+     </div>`;
+     res+=html;
+    }
+    todoList.innerHTML=res;
+}
+</script>
+
+</html>
+
+
+
