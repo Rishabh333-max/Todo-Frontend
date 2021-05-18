@@ -361,7 +361,7 @@ logoutBTN.addEventListener("click",function(e){
    //extract _id from userInfo
     let UserId=UserInfo[0]._id;
     //api url
-    let url="http://todoappbackend01.herokuapp.com/getTodo/"+UserId;
+    let url="https://todoappbackend03.herokuapp.com/getTodo/"+UserId;
     //fetch
     fetch(url,{
         method:"GET"
@@ -379,7 +379,7 @@ logoutBTN.addEventListener("click",function(e){
     })
     //create a function to delete todo
     function deleteIt(UserId,todoId){
-        let url="http://todoappbackend01.herokuapp.com/deleteTodo/"+UserId+"/"+todoId;
+        let url="https://todoappbackend03.herokuapp.com/deleteTodo/"+UserId+"/"+todoId;
         //fetch url here
         fetch(url,{
             method:"DELETE"
@@ -410,7 +410,7 @@ logoutBTN.addEventListener("click",function(e){
         }
         console.log(payload);
 
-        let url="http://todoappbackend01.herokuapp.com/updateTodo";
+        let url="https://todoappbackend03.herokuapp.com/updateTodo";
 
         //fetch
         fetch(url,{
